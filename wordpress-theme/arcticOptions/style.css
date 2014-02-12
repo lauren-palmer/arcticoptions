@@ -1,0 +1,586 @@
+/*
+Theme Name: Arctic Options
+Theme URI:
+Description: 
+Author: Lauren Walker
+Author URI: 
+Version: 0.1
+
+
+ 
+*/
+
+/*** GLOBAL : GENERAL STYLE DEFAULTS ***/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic);
+
+@font-face{
+	font-family: 'Dolce Vita';
+	src: url('styles/Dolce-Vita.eot'); /* IE9 Compat Modes */
+	src: url('styles/Dolce-Vita.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('styles/Dolce-Vita.woff') format('woff'), /* Modern Browsers */
+	     url('styles/Dolce-Vita.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('styles/Dolce-Vita.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+html
+{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+body
+{
+	height: 100%;
+	background: #fff;
+	margin: 0;
+}
+body, input, textarea
+{
+	color: #222;    
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6
+{ 
+	font-weight: normal;
+	clear: both;
+}
+h1{
+	font-size: 30px;
+	font-weight: 500;
+}
+h2{
+	font-size: 26px;
+}
+h3{
+	font-size: 24px;
+	font-weight: 300;
+}
+h4{
+	font-size: 20px;
+	font-weight: 400;
+}
+h5{
+	font-size: 20px;
+	font-weight: 300;
+	margin-top:0px;
+}
+h6{
+	font-size: 16px;
+	font-weight: 300;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.partner-title{
+	display:inline;
+	font-size: 24px;
+}
+h5.partner-title{
+	margin-left: 10px;
+}
+.inline{
+	display: inline;
+	margin-right: 20px;
+}
+hr
+{
+	background-color: #999;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+pre
+{
+	font: 11px Monaco, monospace;
+	line-height: 1.5;
+	margin-bottom: 1.5em;
+}
+code
+{
+	font: 11px Monaco, monospace;
+}
+p
+{
+	margin: 4px 0 12px 0;
+}
+a
+{
+	color: #336699;
+	text-decoration: none;
+	transition: all .5s;
+	font-weight: 400;
+}
+a:hover
+{
+	color: #3399CC;
+}
+a:visited
+{
+	color: #3399CC;
+}
+
+strong{
+	font-weight: 500;
+}
+
+.clear{
+	clear: both;
+}
+
+img{
+	max-width: 900px;
+	height: auto;
+	display: block;
+	clear: both;
+}
+
+.wp-caption-text{
+	font-size: 11px;
+	color: #777;
+}
+
+.wp-caption img{
+	width: 100%;
+}
+
+.forty{
+	width: 38%;
+}
+
+.sixty{
+	width: 57%;
+}
+
+
+
+/*** PAGE LAYOUT ***/
+
+/* Styles that affect the entire layout of the page */
+#main{
+	display: inline-block;
+}
+#container
+{
+	display: inline-block;
+}
+#wrapper{
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 400px;
+}
+#content
+{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 20px;
+}
+
+
+/*** HEADER : MENU ***/
+#header{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2px;
+	width: 90%;
+	min-height: 65px;
+}
+#logo{
+	float: left;
+	margin-top: 6px;
+}
+#header .logo{
+	width: 75px;
+	float: left;
+	margin-right: 9px;
+}
+.title {
+	font-size: 20px;
+	font-family: "Dolce Vita";
+	float: left;
+	display: block;
+	line-height: 18px;
+	clear: none;
+	margin: 0px;
+}
+.subtitle {
+	font-size: 11px;
+	font-weight: 300;
+	float: left;
+	display: block;
+	clear: none;
+	margin: 0px;
+}
+#header-divider{
+	background-image:url('img/aerial-view.jpg');
+	background-size: cover;
+	height: 66px;
+	clear: both;
+}
+/* To see a menu in your header, you'll need to first add one in WordPress Admin */
+.menu ul
+{
+    list-style: none;
+    margin: 0;
+}
+.menu ul ul
+{
+    display: none;
+}
+.menu li
+{
+    display: inline;
+    float: left;
+	padding: 0 8px 0 4px;
+}
+.menu-item a{
+	font-size: 15px;
+	font-family: Roboto;
+	text-transform: uppercase;
+	color: #666666;
+	font-weight: 300;
+}
+.menu-item a:hover
+{
+	color: #222;
+}
+
+
+
+/*** HEADER : OTHER ***/
+.home-page .archive{
+	display: none;
+}
+
+#slideshow{
+	margin-bottom: 600px;
+}
+#slideshow .item{
+	background-size: cover;
+	background-position-x: 50%;
+	background-color: #0E3950;
+	height: 600px;
+	width: 100%;
+	position: absolute;
+	z-index: 8;
+}
+#slideshow .item.active{
+	z-index: 10;
+}
+#slideshow .item.last-active{
+	z-index: 9;
+}
+#slideshow .item.whale{
+	background-image: url('img/whale.jpg');
+	background-position: 0 100%;
+}
+#slideshow .item.ice{
+	background-image: url('img/ice.jpg');
+	background-position: 0 100%;
+}
+#slideshow .item.boat{
+	background-image: url('img/boat.jpg');
+	background-position: 0 68%;
+}
+#slideshow .item.family{
+	background-image: url('img/family.jpg');
+	background-position: 0 72%;
+}
+#slideshow cite{
+	color: #CCCCCC;
+	font-size: 10px;
+	display: block;
+	float: right;
+}
+#slideshow cite a{
+	color: #CCC;
+	margin-right:10px;
+}
+#slideshow .darker-text cite,
+#slideshow .darker-text cite a{
+	color: #333;
+}
+/*** CONTENT : POSTS AND PAGES ***/
+.post{
+	margin-bottom: 50px;
+}
+
+/* Entry and Page Titles */
+.entry-title a
+{
+	color: #444444;
+}
+.entry-title a:before{
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 21px;
+	color: #999;
+	margin-right: 20px;
+	content: "Upcoming Event";
+}
+.category-event-archive .entry-title a:before{
+	content: "Past Event";
+}
+/* Media Alignment */
+.alignright
+{
+	/* Style for right-aligned images in posts */
+	padding: 8px 0 8px 8px;
+	float: right;
+}
+.alignleft
+{
+	/* Style for left-aligned images in posts */
+	padding: 8px 20px 8px 0;
+	float: left;
+}
+
+/* Entry Content */
+.entry-content
+{
+	/* Style that affects actual entry/post content */
+}
+.entry-content ul{
+	padding-left: 10px;
+}
+.entry-content li
+{
+	list-style: none;
+	border-left: 3px solid #93963d;
+	margin-bottom: 9px;
+	padding-left: 5px;
+	padding-right: 5px;
+	line-height: 2em;
+}
+
+.entry-utility
+{
+	/* Style for the entry utility, which sits below a post and provides info like categories, tags, feeds, and an edit link (for authors) */
+}
+.entry-meta
+{
+	/* Style for the entry metadata (author, etc.) */
+	color: #999;
+}
+.meta-sep{
+	display:none;
+}
+.author{
+	display: none;
+	
+}
+.meta-prep-author{
+	display: none;
+}
+a.post-edit-link{
+	background-color: #3399CC;
+color: #FFFFFF;
+width: 75px;
+margin-left: 20px;
+display: inline-block;
+text-align: center;
+border-radius: 4px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+}
+.wrapper{
+	margin-bottom: 30px;
+}
+
+.navigation
+{
+	/* Style for the navigation links (next/previous post) on a given post */
+}
+
+/**Sticky posts */
+.sticky{
+	margin-top: -54px;
+	z-index: 10;
+	position: relative;
+	background-color: #FFF;
+	border-bottom: 10px solid #EEE;
+	padding: 30px;
+	border-radius: 2px;
+}
+.sticky .entry-title,
+.sticky .entry-meta,
+.sticky .entry-utility{
+	display: none;
+}	
+	
+/** Header***/
+
+#access header{
+	height: 40px;
+	min-width: 290px;
+	width: 20%;
+	float: left;
+	padding-top: 13px;
+}
+
+	.menu-header{
+		float: right;
+	}
+	.menu{
+		margin: 0px;
+		float: right;
+		padding: 0px;
+	}
+	.menu-header li {
+		margin: 0 20px 20px 0;
+		margin: 0 1.757142857rem 0px 0;
+		position: relative;
+		z-index: 11;
+	}
+	.menu-header li:last-child {
+		margin-right: 0px;
+	}
+	.menu-header li ul {
+		display: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 100%;
+		z-index: 1;
+	}
+	.menu-header li ul ul {
+		top: 0;
+		left: 100%;
+	}
+	.menu-header ul li:hover > ul {
+		border-left: 0;
+		display: block;
+	}
+	.menu-header li ul li a {
+		background: #efefef;
+		border-bottom: 1px solid #ededed;
+		display: block;
+		font-size: 11px;
+		font-size: 0.785714286rem;
+		line-height: 2.181818182;
+		padding: 8px 10px;
+		padding: 0.571428571rem 0.714285714rem;
+		width: 180px;
+		width: 12.85714286rem;
+		white-space: normal;
+	}
+	.menu-header li ul li a:hover {
+		background: #e3e3e3;
+		color: #444;
+	}
+	.menu-header .current-menu-item > a,
+	.menu-header .current-menu-ancestor > a,
+	.menu-header .current_page_item > a,
+	.menu-header .current_page_ancestor > a {
+		border-top: 3px solid #666;
+	}
+	
+	.sub-menu .current-menu-item a{
+		border:0px;
+		font-weight: 500;
+	}
+	
+	.menu{
+		margin: 0px;
+		float: right;
+	}
+
+	.menu-item a{
+		cursor: pointer;
+	}
+/*** CONTENT : COMMENTS ***/
+#comments{
+	border-top: 5px solid #EEE;
+	margin-top: 50px;
+}
+.comments img
+{
+	/* Style for the user avatar beside each comment */
+	float: left;
+	margin: 0 12px 8px 0;
+}
+.comments-link{
+	margin-left: 20px;
+}
+
+
+/*** FOOTER ***/
+#footer
+{
+	float: left;
+	clear: both;
+	position: absolute;
+	bottom: 0px;
+	background-color: #CCC;
+	padding: 10px 5%;
+}
+#footer .logos-row{
+	width: 100%;
+}
+#footer img {
+	height: 60px;
+	display: inline;
+	margin-right: 10px;
+	-webkit-filter: grayscale(65%);
+	transition: all .5s;
+}
+#footer img:hover{
+	-webkit-filter: none;
+}
+#footer .UAF{
+	height: 41px;
+}
+#footer .UCSB,
+#footer .MSI{
+	height: 50px;
+}
+#footer .mission{
+	height: 78px;
+	position: relative;
+	top: 11px;
+}
+#footer .PEP{
+	position: relative;
+	top: 10px;
+}
+#footer .DigIn{
+	height: 50px;
+}
+#footer .bren{
+	height: 50px;
+}
+.footer-nav{
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	max-width: 600px;
+}
+#footer .menu-item{
+	display: block;
+	float: left;
+	border-right: 1px solid #AAA;
+}
+.footer-nav .current-menu-item > a{
+	font-weight: 500;
+}
+.footer-nav .menu-item > a{
+	text-transform: none;
+}
+#footer .sub-menu{
+	padding-left: 0px;
+}
+#footer .menu-item-has-children{
+	border-right: 0px;
+}
+#footer .menu-item-has-children > a{
+	display: none;
+}
+
+/*** YOUR CSS ***/
+
+
+
