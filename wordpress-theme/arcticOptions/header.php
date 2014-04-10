@@ -13,6 +13,17 @@
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
  
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
+    <script>
+      //GOOGLE ANALYTICS
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-49870960-1', 'arcticoptions.org');
+	  ga('send', 'pageview');
+	
+	</script>
    <script type="text/javascript" language="JavaScript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
@@ -30,7 +41,7 @@
             <div id="access">
             	<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
             	
-            	<a href="." id="logo"><img src="./wp-content/themes/arcticOptions/img/ArcticOptionsLogo.png" class="logo" /></a>
+            	<a href="." id="logo"><img src="/wp-content/themes/arcticOptions/img/ArcticOptionsLogo.png" class="logo" /></a>
             	<header>
             		<h1 class="title">Arctic Options</h1>
             		<h2 class="subtitle">Holistic Integration for Arctic Coastal-Marine Sustainability</h2>
