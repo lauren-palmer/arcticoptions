@@ -580,7 +580,12 @@ border-radius: 4px;
 	display: none;
 }
 
-/*** YOUR CSS ***/
-
+/*** SIMPLE LIGHTBOX CSS ***/
+.gallery img{
+	border: 0px !important;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
 
 
