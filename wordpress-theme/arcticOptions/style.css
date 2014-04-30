@@ -37,7 +37,7 @@ body
 }
 body, input, textarea
 {
-	color: #222;    
+	color: #333;    
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	font-size: 14px;
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6
 }
 h1{
 	font-size: 30px;
-	font-weight: 500;
+	font-weight: 300;
 }
 h2{
 	font-size: 26px;
