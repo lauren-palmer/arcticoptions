@@ -18,6 +18,7 @@
     		<img src="/wp-content/themes/arcticOptions/img/cnrs.png" />
     		<img src="/wp-content/themes/arcticOptions/img/UPMC.png" />
     		<img src="/wp-content/themes/arcticOptions/img/CMAP.png" />
+    		<img src="/wp-content/themes/arcticOptions/img/mgimo.jpg" alt="MGIMO" />
     	</section>
     	
     	<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'footer-nav' ) ); ?>
