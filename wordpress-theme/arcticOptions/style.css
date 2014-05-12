@@ -313,16 +313,12 @@ img{
 {
 	color: #444444;
 }
-.entry-title a:before{
+.entry-title .pretitle{
 	text-transform: uppercase;
 	font-weight: 300;
 	font-size: 21px;
 	color: #999;
 	margin-right: 20px;
-	content: "Upcoming Event";
-}
-.category-event-archive .entry-title a:before{
-	content: "Past Event";
 }
 /* Media Alignment */
 .alignright

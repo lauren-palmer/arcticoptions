@@ -21,6 +21,8 @@
 				<?php
 				 while ( have_posts() ) : the_post(); ?>
 							<?php
+							$class = "";
+							$pretitle = "";
 							$archive = FALSE;
 							$event = FALSE;
 							 $cats = explode( "\n", get_the_category_list("\n") );
@@ -33,10 +35,18 @@
 								}
 								
 							}
+							
+							if($archive){ //If this is a past event
+								$class .= " archive";
+								$pretitle = '<span class="pretitle">Past event </span>';
+							}
+							elseif($event){ //If this is an upcoming event
+								$pretitle = '<span class="pretitle">Upcoming event </span>';
+							}
 
 							?>
-				                <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				                    <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'hbd-theme'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+				                <div id="post-<?php the_ID(); ?>" <?php post_class($class); ?>>
+				                    <h2 class="entry-title"><?=$pretitle?><a href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'hbd-theme'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 				                    <div class="entry-content">
 				<?php the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'hbd-theme' )  ); ?>

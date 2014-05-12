@@ -61,23 +61,35 @@ $('#header-divider').css('display', 'none');
 		 $x = 0;
 				 while ( have_posts() ) : the_post();
 				 			$x++;
+				 			$class = "";
+							$pretitle = "";
 							$archive = FALSE;
+							$event = FALSE;
 							 $cats = explode( "\n", get_the_category_list("\n") );
 							foreach($cats as $cat){
 								if (strpos($cat,'Event Archive') !== false) {
-								    $archive = TRUE;									
+								    $archive = TRUE;
+									$class .= " archive";
+									$pretitle = '<span class="pretitle">Past event </span>';									
+								}
+								else if (strpos($cat,'Events') !== false) {
+								    $event = TRUE;									
+								}
+								
+								if (strpos($cat,'Announcement') !== false) {
+									$pretitle = '<span class="pretitle">Announcement </span>';
 								}
 							}
 				
-		if($x==2){ //After the sticky
-			print('<h1>Upcoming Events</h1>');
+		if($event && !$archive){ //If this is an upcoming event
+			$pretitle = '<span class="pretitle">Upcoming event </span>';
 		}
 						
 		?>
 		<?php /* Create a div with a unique ID thanks to the_ID() and semantic classes with post_class() */ ?>
-		                <div id="post-<?php the_ID(); ?>" <?php if($archive){ post_class('archive'); } else{ post_class(); }?>>
+		                <div id="post-<?php the_ID(); ?>" <?php post_class($class); ?>>
 		<?php /* an h2 title */ ?>
-		                    <h2 class="entry-title <?php if($archive){print('archive'); } ?>"><?php if($archive){print('<span class="archive-title">Past event </span>'); } ?><a href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'hbd-theme'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+		                    <h2 class="entry-title <?=$class?>"><?=$pretitle?><a href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'hbd-theme'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 		<?php /* Microformatted, translatable post meta */ ?>
 		                    <div class="entry-meta">
